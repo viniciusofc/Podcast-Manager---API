@@ -31,16 +31,12 @@ reponse:
     podcastname: "flow",
     episode: "CBUM - Flow #319",
     videoId: "sd4f568sdf",
-    cover: "https://teste.com.br",
-    link: "https://www.youtube.com.br",
     categories: ["saúde", "esporte", "bodybuilder"]
     },
     {
     podcastname: "flow",
     episode: "RUBENS BARRICHELLO - Flow #339",
     videoId: "sd4f568sdf",
-    cover: "https://teste.com.br",
-    link: "https://www.youtube.com.br",
     categories: ["esporte", "corrida"]
     }
 ]
