@@ -63,31 +63,28 @@ A API permite que o cliente filtre episódios com base no nome do podcast, retor
 ]
 ```
 
-## Código Base
-
-Aqui está um exemplo de como você pode configurar as rotas do servidor para listar episódios e filtrar pelo nome do podcast.
-
-```typescript
-import * as http from "http";
-import { getListEpisodes, getFilterEpisodes } from './controllers/podcasts-controller';
-import { Routes } from "./routes/routes";
-import { HttpMethod } from "./utils/http-methods";
-
-export const app = (async (request: http.IncomingMessage, response: http.ServerResponse) => {
-
-    const baseUrl = request.url?.split("?")[0];
-
-    if (request.method === HttpMethod.GET && baseUrl === Routes.LIST) {
-        await getListEpisodes(request, response);
-    }
-
-    if (request.method === HttpMethod.GET && baseUrl === Routes.EPISODE) {
-        await getFilterEpisodes(request, response);
-    }
-});
-```
-
 ### Rotas Definidas:
 
 - **GET `/episodes`**: Retorna todos os episódios de podcasts.
 - **GET `/episodes?podcastname={nome}`**: Filtra os episódios com base no nome do podcast fornecido como parâmetro.
+
+Com base no seu `package.json`, aqui está uma seção para o **README** sobre as tecnologias utilizadas:
+
+---
+
+### Tecnologias Utilizadas
+
+Este projeto utiliza as seguintes tecnologias e ferramentas:
+
+- **Node.js**: Plataforma de execução JavaScript server-side.
+- **TypeScript**: Superset de JavaScript com tipagem estática para melhorar a qualidade do código e facilitar a manutenção.
+- **Tsup**: Ferramenta de empacotamento para compilar o código TypeScript de forma rápida e eficiente.
+- **Tsx**: Executa arquivos TypeScript diretamente, permitindo uma experiência de desenvolvimento rápida sem necessidade de compilar manualmente os arquivos TypeScript.
+- **npm (Node Package Manager)**: Gerenciador de pacotes utilizado para instalar e gerenciar dependências.
+
+### Scripts Disponíveis
+
+- **`start:dev`**: Inicia o servidor em modo de desenvolvimento com as variáveis de ambiente definidas no `.env`.
+- **`start:watch`**: Inicia o servidor em modo de observação (watch), recompilando automaticamente ao detectar mudanças no código.
+- **`dist`**: Gera o build de produção usando `tsup`.
+- **`start:dist`**: Cria o build e executa o servidor usando o código compilado.
