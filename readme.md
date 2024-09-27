@@ -91,7 +91,3 @@ export const app = (async (request: http.IncomingMessage, response: http.ServerR
 
 - **GET `/episodes`**: Retorna todos os episódios de podcasts.
 - **GET `/episodes?podcastname={nome}`**: Filtra os episódios com base no nome do podcast fornecido como parâmetro.
-
----
-
-Esse formato de **README** ajuda a documentar as principais funcionalidades e como a API funciona, além de fornecer exemplos de respostas e o código de implementação. Se você quiser incluir mais detalhes ou expandir outras seções, como a instalação ou uso de dependências, basta adicionar conforme necessário!
